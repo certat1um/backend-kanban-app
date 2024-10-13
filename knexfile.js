@@ -3,33 +3,19 @@ require('dotenv/config');
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-
-const {
-  IS_LOCAL,
-  DB_HOST,
-  DB_PORT,
-  DB_PASS,
-  DB_USER,
-  DB_NAME,
-  EXTERNAL_DB_URL,
-  DB_TEST_USER,
-  DB_TEST_PASS,
-  DB_TEST_NAME,
-} = process.env;
-
 module.exports = {
   development: {
     client: 'postgres',
-    connection: IS_LOCAL
+    connection: process.env.IS_LOCAL
       ? {
-          host: DB_HOST,
-          port: DB_PORT,
-          user: DB_USER,
-          password: DB_PASS,
-          database: DB_NAME,
+          host: process.env.DB_HOST,
+          port: process.env.DB_PORT,
+          user: process.env.DB_USER,
+          password: process.env.DB_PASS,
+          database: process.env.DB_NAME,
         }
       : {
-          connectionString: EXTERNAL_DB_URL,
+          connectionString: process.env.EXTERNAL_DB_URL,
           ssl: {
             rejectUnauthorized: false,
           },
@@ -43,13 +29,13 @@ module.exports = {
     },
   },
   test: {
-    client: 'pg',
+    client: 'postgres',
     connection: {
-      host: DB_HOST,
-      port: DB_PORT,
-      user: DB_TEST_USER,
-      password: DB_TEST_PASS,
-      database: DB_TEST_NAME,
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
+      user: process.env.DB_TEST_USER,
+      password: process.env.DB_TEST_PASS,
+      database: process.env.DB_TEST_NAME,
     },
     migrations: {
       tableName: 'knex_migrations',
