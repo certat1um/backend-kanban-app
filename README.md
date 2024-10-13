@@ -8,7 +8,7 @@
 $ npm install
 ```
 
-> Create **.env** file with data copied from **.env.example**
+> Create **.env** file with data copied from **.env.example**.
 
 ## Local Database setup
 
@@ -26,7 +26,7 @@ $ npm run knex:migrate-and-seed
 
 ## External Database setup
 
-> Set in .env variable:
+> Set in `.env`:
 
 ```bash
 USE_LOCAL=false
@@ -45,7 +45,7 @@ $ npm run dev
 $ npm run test
 ```
 
-> If you are using local database, be sure you have `.env.test` file with all necessary data and running container from `docker-compose.yml`.
+> If you are using local database, be sure you have `.env.test` file with all necessary data and running container with test database from `docker-compose.yml`.
 
 ## Postman / Insomnia
 
