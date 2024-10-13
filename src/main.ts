@@ -4,7 +4,6 @@ import express from 'express';
 import { useContainer, useExpressServer } from 'routing-controllers';
 import { Container } from 'typedi';
 import bodyParser from 'body-parser';
-import { envConfig } from './config/envConfig';
 import { checkKnexConnection } from '../database/knex';
 import { BoardController } from './board/controllers/board';
 import { GlobalErrorHandlerMiddleware } from './_common/middlewares/global.error-handler';
@@ -16,7 +15,7 @@ useContainer(Container);
 
 const app = express();
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: '*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 };
@@ -32,7 +31,7 @@ useExpressServer(app, {
   defaultErrorHandler: false,
 });
 
-const PORT = envConfig.PORT;
+const PORT = process.env.PORT || 3333;
 
 const server = app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
