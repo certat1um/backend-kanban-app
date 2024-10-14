@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./dist/src/main.js",
     "dev": "nodemon ./src/main.ts",
-    "build": "npx tsc",
+    "build": "tsc",
     "generate:migration": "knex migrate:make",
     "generate:seed": "knex seed:make",
     "knex:migrate": "knex migrate:latest",
