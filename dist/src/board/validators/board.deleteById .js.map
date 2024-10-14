@@ -1,1 +1,0 @@
-{"version":3,"file":"board.deleteById .js","sourceRoot":"","sources":["../../../../src/board/validators/board.deleteById .ts"],"names":[],"mappings":";;;;;;AAAA,8CAAsB;AAGT,QAAA,UAAU,GAAuB;IAC5C,MAAM,EAAE;QACN,EAAE,EAAE,aAAG,CAAC,MAAM,EAAE,CAAC,IAAI,CAAC,EAAE,OAAO,EAAE,QAAQ,EAAE,CAAC,CAAC,QAAQ,EAAE;KACxD;CACF,CAAC"}

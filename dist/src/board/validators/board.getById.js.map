@@ -1,1 +1,0 @@
-{"version":3,"file":"board.getById.js","sourceRoot":"","sources":["../../../../src/board/validators/board.getById.ts"],"names":[],"mappings":";;;;;;AAAA,8CAAsB;AAGT,QAAA,OAAO,GAAuB;IACzC,MAAM,EAAE;QACN,EAAE,EAAE,aAAG,CAAC,MAAM,EAAE,CAAC,IAAI,CAAC,EAAE,OAAO,EAAE,QAAQ,EAAE,CAAC,CAAC,QAAQ,EAAE;KACxD;CACF,CAAC"}
