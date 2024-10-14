@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node ./dist/main.js",
+    "start": "node ./dist/src/main.js",
     "dev": "nodemon ./src/main.ts",
     "build": "npx tsc",
     "generate:migration": "knex migrate:make",
