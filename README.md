@@ -1,5 +1,16 @@
 # Backend Kanban Api
 
+## Tech Stack
+
+- Express.js (using `routing-controllers` and `typedi` packages)
+- Typescript
+- PostgreSQL
+- Objection.js and Knex.js
+- Axios
+- Joi
+- Jest
+- ESLint and Prettier
+
 ## Project setup
 
 > Install npm packages:
@@ -29,8 +40,8 @@ $ npm run knex:migrate-and-seed
 > Set in `.env`:
 
 ```bash
-USE_LOCAL=false
-DATABASE_URL=<YOUR_DATABASE_URL_PATH>
+NODE_ENV=production
+EXTERNAL_DB_URL=<YOUR_EXTERNAL_DATABASE_URL>
 ```
 
 ## Compile and run the project
@@ -51,8 +62,10 @@ $ npm run test
 
 > Test endpoints via Postman or Insomnia. You can import environment from `/postman` directory.
 
-## Render Deploy
+## Render.com Deploy
 
 > Project also deployed on **Render.com**. (requests can be delayed by 50 seconds or more in due to free plan of using Render service)
->
-> Base route: ``
+
+Frontend: `https://frontend-kanban-app.onrender.com`
+
+Backend: `https://backend-kanban-app.onrender.com/api`
